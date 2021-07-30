@@ -7,7 +7,17 @@ def do_math(operator):
     elif operator == "7":
         val1 = float(input("\nEnter value for calculating the logarithm to base 2: "))
         final = math.log(val1, 2)
+    elif operator == "8" or operator == "9" or operator == "10":
+        val1 = float(input("\nEnter the value (in degrees): "))
+        if operator == "8":
+            final = math.sin(math.radians(val1))
+        elif operator == "9":
+            final = math.cos(math.radians(val1))
+        elif operator == "10":
+            final = math.tan(math.radians(val1))
     else:
+        if not(operator == "0" or operator == "1" or operator == "2" or operator == "3" or operator == "4" or operator == "5"):
+           return "\nInvalid option!\n" 
         val1 = float(input("\nFirst value: "))
         val2 = float(input("\nSecond value: "))
         if operator == "0":
